@@ -39,7 +39,7 @@ def _yacl():
         http_archive,
         name = "yacl",
         urls = [
-            "https://github.com/secretflow/yacl/archive/refs/tags/0.4.5b4_nightly_20240731.tar.gz",
+            "https://codeload.github.com/secretflow/yacl/tar.gz/refs/tags/0.4.5b4_nightly_20240731",
         ],
         strip_prefix = "yacl-0.4.5b4_nightly_20240731",
         sha256 = "952715bd56f6d9386984e9963426a1399bd2bd3702cf3efede9c82591cfab99b",
@@ -50,7 +50,7 @@ def _libpsi():
         http_archive,
         name = "psi",
         urls = [
-            "https://github.com/secretflow/psi/archive/refs/tags/v0.4.0.dev240801.tar.gz",
+            "https://codeload.github.com/secretflow/psi/tar.gz/refs/tags/v0.4.0.dev240801",
         ],
         strip_prefix = "psi-0.4.0.dev240801",
         sha256 = "541ad74de0cd9e6bffe348c3bc97e659fccb1f1811e612f9d8e6b1debdd7c2a0",
@@ -93,7 +93,7 @@ def _com_github_facebook_zstd():
         sha256 = "30f35f71c1203369dc979ecde0400ffea93c27391bfd2ac5a9715d2173d92ff7",
         type = ".tar.gz",
         urls = [
-            "https://github.com/facebook/zstd/archive/refs/tags/v1.5.6.tar.gz",
+            "https://codeload.github.com/facebook/zstd/tar.gz/refs/tags/v1.5.6",
         ],
     )
 
@@ -106,7 +106,7 @@ def _com_github_xtensor_xtensor():
         build_file = "@spulib//bazel:xtensor.BUILD",
         type = "tar.gz",
         urls = [
-            "https://github.com/xtensor-stack/xtensor/archive/refs/tags/0.25.0.tar.gz",
+            "https://codeload.github.com/xtensor-stack/xtensor/tar.gz/refs/tags/0.25.0",
         ],
     )
 
@@ -119,7 +119,7 @@ def _com_github_xtensor_xtl():
         build_file = "@spulib//bazel:xtl.BUILD",
         type = "tar.gz",
         urls = [
-            "https://github.com/xtensor-stack/xtl/archive/refs/tags/0.7.7.tar.gz",
+            "https://codeload.github.com/xtensor-stack/xtl/tar.gz/refs/tags/0.7.7",
         ],
     )
 
@@ -146,7 +146,7 @@ def _com_github_openxla_xla():
         strip_prefix = "xla-" + OPENXLA_COMMIT,
         type = ".tar.gz",
         urls = [
-            "https://github.com/openxla/xla/archive/{commit}.tar.gz".format(commit = OPENXLA_COMMIT),
+            "https://codeload.github.com/openxla/xla/tar.gz/{commit}".format(commit = OPENXLA_COMMIT),
         ],
         patch_args = ["-p1", "-l"],
         patches = ["@spulib//bazel:patches/xla-non-hermetic-python.patch"],
@@ -159,7 +159,7 @@ def _com_github_pybind11_bazel():
         sha256 = "dc4882b23a617575d0fd822aba88aa4a14133c3d428b5a8fb83d81d03444a475",
         strip_prefix = "pybind11_bazel-8889d39b2b925b2a47519ae09402a96f00ccf2b4",
         urls = [
-            "https://github.com/pybind/pybind11_bazel/archive/8889d39b2b925b2a47519ae09402a96f00ccf2b4.zip",
+            "https://codeload.github.com/pybind/pybind11_bazel/zip/8889d39b2b925b2a47519ae09402a96f00ccf2b4",
         ],
     )
 
@@ -171,7 +171,7 @@ def _com_github_pybind11():
         sha256 = "51631e88960a8856f9c497027f55c9f2f9115cafb08c0005439838a05ba17bfc",
         strip_prefix = "pybind11-2.13.1",
         urls = [
-            "https://github.com/pybind/pybind11/archive/refs/tags/v2.13.1.tar.gz",
+            "https://codeload.github.com/pybind/pybind11/tar.gz/refs/tags/v2.13.1",
         ],
     )
 
@@ -184,7 +184,7 @@ def _com_intel_hexl():
         sha256 = "3692e6e6183dbc49253e51e86c3e52e7affcac925f57db0949dbb4d34b558a9a",
         build_file = "@spulib//bazel:hexl.BUILD",
         urls = [
-            "https://github.com/intel/hexl/archive/refs/tags/v1.2.5.tar.gz",
+            "https://codeload.github.com/intel/hexl/tar.gz/refs/tags/v1.2.5",
         ],
         patch_args = ["-p1"],
         patches = ["@spulib//bazel:patches/hexl.patch"],
@@ -204,7 +204,7 @@ def _com_github_emptoolkit_emp_tool():
             "@spulib//bazel:patches/emp-tool-sse2neon.patch",
         ],
         urls = [
-            "https://github.com/emp-toolkit/emp-tool/archive/refs/tags/0.2.5.tar.gz",
+            "https://codeload.github.com/emp-toolkit/emp-tool/tar.gz/refs/tags/0.2.5",
         ],
         build_file = "@spulib//bazel:emp-tool.BUILD",
     )
@@ -219,7 +219,7 @@ def _com_github_emptoolkit_emp_ot():
         patch_args = ["-p1"],
         patches = ["@spulib//bazel:patches/emp-ot.patch"],
         urls = [
-            "https://github.com/emp-toolkit/emp-ot/archive/refs/tags/0.2.4.tar.gz",
+            "https://codeload.github.com/emp-toolkit/emp-ot/tar.gz/refs/tags/0.2.4",
         ],
         build_file = "@spulib//bazel:emp-ot.BUILD",
     )
@@ -244,7 +244,7 @@ def _com_github_nvidia_cutlass():
         name = "com_github_nvidia_cutlass",
         strip_prefix = "cutlass-3.5.0",
         urls = [
-            "https://github.com/NVIDIA/cutlass/archive/refs/tags/v3.5.0.tar.gz",
+            "https://codeload.github.com/NVIDIA/cutlass/tar.gz/refs/tags/v3.5.0",
         ],
         sha256 = "ef6af8526e3ad04f9827f35ee57eec555d09447f70a0ad0cf684a2e426ccbcb6",
         build_file = "@spulib//bazel:nvidia_cutlass.BUILD",
